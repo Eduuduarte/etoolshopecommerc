@@ -1,15 +1,15 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
 import { client } from '../lib/client';
 import { Product } from '../types/datasheet';
 import Header from '../components/Header/Index';
 import Banner from '../components/Banner/Index';
+import { Formatter } from '../lib/useFormatter';
 
 const Home = (data: Props) => {
 
-  console.log(data.products);
+  const formatter = Formatter();
 
   return (
     <div className={styles.container}>
